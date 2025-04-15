@@ -32,16 +32,18 @@ class ActivitySerializer(serializers.ModelSerializer):
         model = Activity
         fields = '__all__'
 
-class WorkoutSerializer(serializers.ModelSerializer):
-    _id = ObjectIdField()
-
-    class Meta:
-        model = Workout
-        fields = '__all__'
-
 class LeaderboardSerializer(serializers.ModelSerializer):
     _id = ObjectIdField()
+    user = ObjectIdField()
 
     class Meta:
         model = Leaderboard
+        fields = '__all__'
+
+class WorkoutSerializer(serializers.ModelSerializer):
+    _id = ObjectIdField()
+    user = ObjectIdField()
+
+    class Meta:
+        model = Workout
         fields = '__all__'

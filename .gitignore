@@ -37,3 +37,6 @@ venv/
 
 # Django secret key (if any generated files)
 *.env
+
+# Exclude public directory
+public/
