@@ -1,0 +1,1 @@
+# All models are already registered in the admin interface.

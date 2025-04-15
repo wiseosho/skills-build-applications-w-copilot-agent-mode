@@ -442,7 +442,7 @@ urlpatterns = [
 ]
 ```
 
-## Populate the databse with sample data
+## Populate the database with sample data
 
 ```text
 Let's use manage.py to get the database setup and populated based on fields in models.py
