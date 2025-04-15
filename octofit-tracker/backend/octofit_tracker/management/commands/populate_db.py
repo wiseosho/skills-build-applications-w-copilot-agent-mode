@@ -26,11 +26,15 @@ class Command(BaseCommand):
 
         # Create teams
         teams = [
-            Team(_id=ObjectId(), name='Blue Team', members=[users[0], users[1]]),
-            Team(_id=ObjectId(), name='Gold Team', members=[users[2], users[3], users[4]]),
+            Team(_id=ObjectId(), name='Blue Team'),
+            Team(_id=ObjectId(), name='Gold Team'),
         ]
         for team in teams:
             team.save()
+
+        # Add members to teams
+        teams[0].members.add(users[0], users[1])
+        teams[1].members.add(users[2], users[3], users[4])
 
         # Create activities
         activities = [
